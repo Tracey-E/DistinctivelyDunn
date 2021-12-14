@@ -7,6 +7,7 @@
     "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
     "client": "cd ./client && npm run start",
     "server": "cd ./server && npm run start",
+    "prebuild": "cd ./client && npm install && cd ../server && npm install && cd ..",
     "build": "cd ./client && npm run build"
   },
   "devDependencies": {
