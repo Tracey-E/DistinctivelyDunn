@@ -15,6 +15,7 @@
   },
   "scripts": {
     "start": "react-scripts --openssl-legacy-provider start",
+    "prebuild": "cd ./client && npm install && cd ../server && npm install && cd ..",
     "build": "react-scripts --openssl-legacy-provider build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
