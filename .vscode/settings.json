@@ -1,0 +1,111 @@
+{
+    "gitlens.advanced.messages": {
+        "suppressGitMissingWarning": true
+    },
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "terminal.integrated.tabs.enabled": true,
+    "window.zoomLevel": -1,
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
+    "[jsonc]": {
+       
+        "editor.quickSuggestions": {
+            "strings": true
+        },
+        "editor.suggest.insertMode": "replace",
+        "gitlens.codeLens.scopes": [
+            "document"
+        ]
+    },
+    "[json]": {
+
+        "editor.quickSuggestions": {
+            "strings": true
+        },
+        "editor.suggest.insertMode": "replace",
+        "gitlens.codeLens.scopes": [
+            "document"
+        ]
+    },
+    "workbench.startupEditor": "none",
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+    "notebook.lineNumbers": "on",
+    "editor.formatOnSave": true,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "cSpell.userWords": [
+        "adoptdontshop",
+        "allyouneed",
+        "Codecademy",
+        "excu",
+        "reduxjs",
+        "stylesheet",
+        "webfonts",
+        "wireframe"
+    ],
+    "mssql.connections": [
+        {
+            "server": "{{put-server-name-here}}",
+            "database": "{{put-database-name-here}}",
+            "user": "{{put-username-here}}",
+            "password": "{{put-password-here}}"
+        }
+    ],
+    "pgsql.connections": [
+        {
+            "host": "localhost",
+            "dbname": "Ddunn",
+            "user": "postgres",
+            "password": "",
+            "emptyPasswordInput": false,
+            "port": "5432",
+            "profileName": "ddunn",
+            "connectTimeout": 15,
+            "encrypt": false,
+            "applicationName": "vscode-pgsql",
+            "hostaddr": "",
+            "options": "",
+            "sslmode": "prefer",
+            "clientEncoding": "",
+            "sslcompression": true,
+            "sslcert": "",
+            "sslkey": "",
+            "sslrootcert": "",
+            "sslcrl": "",
+            "requirepeer": ""
+        }
+    ],
+    "git.scanRepositories": [
+        "F:"
+    ],
+    "cSpell.words": [
+        "bagid",
+        "Bcol",
+        "createdbagid",
+        "customerid",
+        "Ddunn",
+        "dogsmakemehappy",
+        "dontletthiscute",
+        "iwasrescued",
+        "iworkhard",
+        "myhorseisntspoiled",
+        "nooutfitcomplete",
+        "noreferrer",
+        "oopsdidi",
+        "oopsdidibuy",
+        "rescuedismy",
+        "sorrydidi",
+        "youlostme",
+        "zustand"
+    ]
+}
