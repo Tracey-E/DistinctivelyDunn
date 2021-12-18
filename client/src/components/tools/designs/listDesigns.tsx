@@ -27,6 +27,7 @@ const ListDesigns = () => {
     selectedDesign && imagesData.find((d) => d.name === selectedDesign.name);
   const backgroundImgUrl = !selectedDesign ? logo : selectedDesignData?.url;
   const backgroundImg = `url("${backgroundImgUrl}")`;
+  const imgDescription = selectedDesignData?.description;
   return (
     <Fragment>
       <div className="design" id="design">
@@ -59,8 +60,13 @@ const ListDesigns = () => {
       </div>
       <div>
         <div id="description">
-          You are able to decide your own bag color, and design color.
-          <br /> pictures are for illustration purposes only{" "}
+          {" "}
+          <label>
+            You are able to decide your own bag color, and design color.
+            <br />
+            {imgDescription}
+            <br /> pictures are for illustration purposes only{" "}
+          </label>
         </div>
       </div>
       <img

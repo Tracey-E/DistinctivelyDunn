@@ -22,8 +22,9 @@ const InputDesignColors = () => {
    
   };
   const handleChange = (e) => {
- return    setColor(e.target.value),
-     e.preventDefault()
+    e.preventDefault()
+ return    setColor(e.target.value)
+   
     
      
   }

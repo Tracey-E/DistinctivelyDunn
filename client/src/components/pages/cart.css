@@ -1,60 +1,84 @@
 .cartPage {
-  display: grid;
-  width: 100%;
-  grid-template-columns: 60% 50%;
-  grid-template-rows: auto;
+  display: flexbox;
+
   margin-top: 5rem;
+  width: 100%;
+  align-items: center;
 }
 
-.cartList  {
-  
-  grid-area: 2/1/3/2;
-  display: table-cell;
-  font-size: larger;
- 
-  float: right;
-  border: 2px solid black;
+caption {
+  display: table-caption;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+table,
+th,
+td {
+  border: 1px solid;
+}
+
+table {
+  width: 100%;
+  max-width: 70rem;
+  height: 20rem;
+  margin: 0 auto;
+  display: block;
+  overflow-x: auto;
   border-spacing: 0;
-
-}
-th{
- padding: 0.5rem;
- border: 2px solid black;
- width:100%;
- font-weight: bolder;
-}
-tr{
-  width:100%;
-  vertical-align: inherit;  
-  outline: 0.5px solid black;
+  background-color: #d2adff;
 }
 
-td{
-  padding-right: 2rem;
-  vertical-align: inherit;  
-  width:100%;
- 
- 
+tbody {
+  white-space: nowrap;
 }
-.bold{
+
+th,
+td {
+  padding: 5px 10px;
+  border-top-width: 0;
+  border-left-width: 0;
+  font-weight: bold;
+}
+
+th {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  vertical-align: bottom;
+}
+
+th:last-child,
+td:last-child {
+  border-right-width: 0;
+}
+
+tr:last-child td {
+  border-bottom-width: 0;
+}
+
+.bold {
   font-weight: bold;
   vertical-align: initial;
 
+  width: 10%;
+  color: rgb(77, 11, 90);
 }
 .start {
-  display:table-row;
- outline: 3px solid rgb(13, 13, 14);
-  color: black;
+  display: table-row;
+  outline: 1px outset rgb(15, 15, 16);
+  border-top: 3px solid black;
   font-weight: bolder;
-  margin-top:1rem;
-  width: 100%;
-  vertical-align:inherit; 
- 
+  vertical-align: inherit;
 }
-tbody{
-  border: 2px solid black;
-}
-.price{
+
+.price {
+  align-self: flex-end;
   font-weight: 1000;
-  width: 100%;
+  font-size: 1.5rem;
+  height: 3rem;
+}
+#cartButton {
+  align-self: center;
+  width: 10rem;
 }

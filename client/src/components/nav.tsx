@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import { useBasketStore } from "./tools/store/store";
+import basket from "../assets/basket/basket.jpeg";
 
 function Nav() {
   return (
@@ -27,14 +28,18 @@ function Nav() {
           {" "}
           <li>Home decor</li>
         </Link>
+
         <Link to="/CartPage">
           {" "}
-          <li> Basket {useBasketStore((state)=> state.basketCount)}</li>
-
-        </Link>
-        <Link to="/AdminPage">
-          {""}
-          <li>Admin log in</li>
+          <li id="basket">
+            {" "}
+            <img alt="basket icon link to basket page" src={basket}></img>{" "}
+            {useBasketStore((state) => state.basketCount)}
+          </li>
+          <Link to="/AdminPage">
+            {""}
+            <li id="adminlogin">Admin log in</li>
+          </Link>
         </Link>
       </ul>
     </nav>

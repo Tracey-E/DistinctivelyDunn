@@ -45,6 +45,7 @@ const BagForm = () => {
     <Fragment>
       <div className="bagForm" id="bagForm">
         <form className="form" id="Form">
+          <h2>Design your bag</h2>
           <ListBagColors />
           <ListDesignColor />
           <ListDesigns />

@@ -2,6 +2,7 @@ import create from "zustand";
 import { persist } from "zustand/middleware";
 
 
+
 export const DEFAULT_BAG = {
   id: 0,
   price: 5.0,
@@ -35,7 +36,7 @@ interface BagStoreState {
   setSelectedBagColor: (next: BagColorType | null) => void;
   selectedDesignColor: DesignColorType | null;
   setSelectedDesignColor: (next: DesignColorType | null) => void;
-  deleteBag: (bag: BagType["id"]) => void;
+  deleteBag: (id: number) => void;
 }
 export type DesignType = { id: number; name: string };
 export type BagColorType = { id: number; name: string };
@@ -58,8 +59,11 @@ export const useBagStore = create<BagStoreState>(
       selectedDesignColor: null,
       setSelectedDesignColor: (next) =>
         set(() => ({ selectedDesignColor: next })),
+        
 
-      deleteBag: (bag) =>
+        
+
+        deleteBag: (bag) =>
         del((state: { bags: any }) => {
           return { bags: [...state.bags, bag] };
         }),
@@ -144,10 +148,11 @@ export const useCreatedBagStore = create<createdBagStoreState>(
       designs_id: null,
       setDesigns_id: (next) => set(() => ({ designs_id: next })),
 
-      deleteCreatedBag: (createdBag) =>
-        del((state: { createdBag: any }) => {
-          return { createdBag: [...state.createdBag, createdBag] };
-        }),
+      deleteCreatedBag: (id) => {
+        
+       
+      }
+       
     }),
     {
       name: "createBag-storage ",

@@ -22,8 +22,9 @@ const InputBagColor = () => {
    
   };
   const handleChange = (e) => {
- return    setName(e.target.value),
-     e.preventDefault()
+    e.preventDefault()
+ return    setName(e.target.value)
+ 
   
      
   }

@@ -20,7 +20,7 @@ const ListOrders = () => {
   }, []);
 
   return <Fragment>
-      
+     <p>{orders}</p>
   </Fragment>;
 };
 
