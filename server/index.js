@@ -6,6 +6,8 @@ const pool = require("./db.js");
 app.use(cors());
 app.use(express.json());
 
+const PORT = process.env.PORT || 5000;
+
 //routes//
 app.get("/", (req, res) => {
   res.status(200).send("hi");
@@ -144,7 +146,7 @@ app.get("/bagColor", async (req, res) => {
 app.get("/createdbag/:id", async (req, res) => {
   try {
     const { id } = req.params;
-    const createedBag = await pool.query(
+    const createdBag = await pool.query(
       "select * from createdbag ",
       
     );
@@ -168,7 +170,7 @@ app.get("/items/:id", async (req, res) => {
 app.get("/orders/:id", async (req, res) => {
   try {
     const { id } = req.params;
-    const iorder = await pool.query(
+    const order = await pool.query(
       "select * from orders where orders_id =$1",
       [id]
     );
@@ -269,7 +271,7 @@ app.get("/design/:id", async (req, res) => {
       "delete from designs where designs_id =$1",
       [id]
     );
-    res.json("succesfully deleted");
+    res.json("successfully deleted");
   } catch (error) {
     console.error(error.message);
   }
@@ -284,7 +286,7 @@ app.get("/designcolor/:id", async (req, res) => {
       "delete from designcolor where designcolor_id =$1",
       [id]
     );
-    res.json("succesfully deleted");
+    res.json("successfully deleted");
   } catch (error) {
     console.error(error.message);
   }
@@ -298,7 +300,7 @@ app.get("/bagColor", async (req, res) => {
       "delete from bagcolor where name = name",
       
     );
-    res.json("succesfully deleted");
+    res.json("successfully deleted");
   } catch (error) {
     console.error(error.message);
   }
@@ -312,7 +314,7 @@ app.get("/createditem/:id", async (req, res) => {
       "delete from createditem where createditem_id =$1",
       [id]
     );
-    res.json("succesfully deleted");
+    res.json("successfully deleted");
   } catch (error) {
     console.error(error.message);
   }
@@ -325,7 +327,7 @@ app.get("/items/:id", async (req, res) => {
       "delete from items where items_id =$1",
       [id]
     );
-    res.json("succesfully deleted");
+    res.json("successfully deleted");
   } catch (error) {
     console.error(error.message);
   }
@@ -340,7 +342,7 @@ app.get("/orders/:id", async (req, res) => {
       "delete from orders where orders_id =$1",
       [id]
     );
-    res.json("succesfully deleted");
+    res.json("successfully deleted");
   } catch (error) {
     console.error(error.message);
   }
@@ -348,6 +350,6 @@ app.get("/orders/:id", async (req, res) => {
 
 //port
 
-app.listen(5000, () => {
+app.listen(PORT, () => {
   console.log("server started");
 });

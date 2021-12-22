@@ -1,5 +1,8 @@
 import React, { Fragment } from "react";
 import { useBagStore } from "../../tools/store/store";
+import {useAuth0, withAuthenticationRequired } from "@auth0/auth0-react";
+
+import Loading from "../../pages/loading";
 
 import InputBagColor from "../../tools/bagColor/inputBagColor";
 import InputDesignColors from "../../tools/designColors/inputDesignColors";
@@ -65,4 +68,5 @@ const AdminForm = () => {
   );
 };
 
-export default AdminForm;
+export default withAuthenticationRequired(AdminForm, {
+  onRedirecting: () => <Loading />, });

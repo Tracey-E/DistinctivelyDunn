@@ -73,13 +73,14 @@
   height: 4rem;
   background-color: transparent;
 }
-#adminlogin {
- 
-  float: inline-end;
-  font-size: 1rem;
-  margin-left: 1rem;
-  text-align: right;
+/**body styles */
+body{
+  width: 100%;
+  background-color: rgb(182, 149, 182);
+
+  height: 100%;
 }
+
 /*Footer**/
 footer {
   height: 15rem;
@@ -123,3 +124,10 @@ button:hover {
   background-color: rgb(16, 16, 15);
   color: antiquewhite;
 }
+/** admin */
+
+#AdminPage{
+
+  justify-content: center;
+}
+

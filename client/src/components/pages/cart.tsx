@@ -5,38 +5,30 @@ import "./cart.css";
 import { useBagStore, useBasketStore } from "../tools/store/store";
 import CreatedBag from "../tools/createdBags/inputCreatedBag";
 import BagForm from "../forms/bagform";
-
+import InputOrders from "../tools/customers/inputCustomers";
 
 /**button to go to customer form needs work */
 
 const CartPage = () => {
   var bags = useBagStore((state) => state.bags);
-  const  decreaseCount = useBasketStore((state)=> state.decreaseCount)
+  const decreaseCount = useBasketStore((state) => state.decreaseCount);
   let totalPrice = 0;
- 
 
   const addTotalPrice = () => {
     bags.map((bag) => (totalPrice = totalPrice + bag.price));
     return totalPrice;
   };
 
-
   const DeleteItem = (e) => {
+    const item = e;
 
-const item = e
+    const index = bags.indexOf(item);
 
-  const index= bags.indexOf(item)
- 
+    bags.splice(index, 1);
+    decreaseCount(useBasketStore, -1);
 
-  bags.splice(index,1) 
-  decreaseCount(useBasketStore, -1)
-
-   return ((state)=> state.bags)
-   
-  
-  }
-
-  
+    return (state) => state.bags;
+  };
 
   /**still need to work on  delete buttons to remove single item or all items.
    * also a buy button to add items to  db and get paypal button/ function to pay for goods
@@ -61,14 +53,11 @@ const item = e
             </tr>
           </thead>
 
-          <tbody >
+          <tbody>
             {bags.map((bag) => (
               <React.Fragment key={bag.id}>
-                <tr className="start"  key={bag.id} >
-                  <td className="bold">
-                    {" "}
-                    Bag:
-                  </td>
+                <tr className="start" key={bag.id}>
+                  <td className="bold"> Bag:</td>
 
                   <td> </td>
                   <td></td>
@@ -91,7 +80,7 @@ const item = e
                   <td>{bag.bagColorName}</td>
                   <td>£{bag.price}</td>
                   <td>
-                    <button type="button" onClick={ DeleteItem}>
+                    <button type="button" onClick={DeleteItem}>
                       Delete Item
                     </button>
                   </td>
@@ -105,7 +94,7 @@ const item = e
         <div className="price">
           <h3>Total Price:£{addTotalPrice()}</h3>{" "}
         </div>
-        <button id="cartButton" type="button">
+        <button id="cartButton" type="button" onClick={InputOrders}>
           BUY{" "}
         </button>
       </div>
@@ -114,6 +103,3 @@ const item = e
 };
 
 export default CartPage;
-function id(id: any): void {
-  throw new Error("Function not implemented.");
-}

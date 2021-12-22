@@ -21,13 +21,15 @@ const InputOrders = () => {
     }
   };
 
- 
+  const handleOrder = (e) => {
+    e.preventDefault();
+    return setOrder(e.target.value);
+  };
 
   return (
     <Fragment>
       <h3>order</h3>
     </Fragment>
   );
-
-  }
+};
 export default InputOrders;
