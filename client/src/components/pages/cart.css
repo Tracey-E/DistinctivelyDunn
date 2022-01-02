@@ -1,3 +1,4 @@
+/** basket styles*/
 .cartPage {
   display: flexbox;
 
@@ -9,13 +10,14 @@
 caption {
   display: table-caption;
   text-align: center;
-  font-size: 1.4rem;
-  font-weight: bold;
+  font-size: 1.5rem;
+  font-weight: bolder;
 }
 table,
 th,
 td {
   border: 1px solid;
+  vertical-align: inherit;
 }
 
 table {
